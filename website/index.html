@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Journal App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Weather Journal App</h1>
+
+    <div class="zipBox">
+      <label for="zip">Enter Zip Code</label>
+      <input class="zip" class="zip" type="text" placeholder="Enter Zip code" required>
+    </div>
+
+    <div id="feelingBox">
+      <label for="feeling">How are you feeling today?</label>
+      <textarea id="feeling" class="feeling" placeholder="Enter your feeling today"></textarea>
+    </div>
+
+    <button id='generate' class="generate">Generate</button>
+
+    <div id="weatherInfo" class="weatherInfo">
+      <h3>Weather Info</h3>
+      <div id="date">Date: <span></span></div>
+      <div id="temp">Temp: <span></span></div>
+      <div id="content">content: <span></span></div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
