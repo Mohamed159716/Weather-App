@@ -34,7 +34,7 @@ function performAction() {
 
 /* Function to GET Web API Data*/
 const getWeatherData = async(baseurl, zip, apikey) => {
-    const res = await fetch(`${baseurl}${zip}&APPID=${apikey}`);
+    const res = await fetch(`${baseurl}${zip}&APPID=${apikey}&units=metric`);
 
     try {
         const data = await res.json();
@@ -73,8 +73,8 @@ const updateUI = async() => {
         allData = await request.json();
         console.log(allData);
         date.innerHTML = allData.date;
-        // temp.innerHTML = allData.temp + '°C';
-        temp.innerHTML = Math.round(parseFloat(allData.temp)-273.15) + 'degree';
+        temp.innerHTML = allData.temp + '°C';
+        // temp.innerHTML = Math.round(parseFloat(allData.temp)-273.15) + 'degree';
         content.innerHTML = allData.content;
     } catch (error) {
         console.log('error', error)
